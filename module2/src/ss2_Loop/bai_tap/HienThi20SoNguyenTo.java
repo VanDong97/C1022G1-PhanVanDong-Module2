@@ -1,4 +1,4 @@
-package ss2_Loop.baitap;
+package ss2_Loop.bai_tap;
 
 import java.util.Scanner;
 

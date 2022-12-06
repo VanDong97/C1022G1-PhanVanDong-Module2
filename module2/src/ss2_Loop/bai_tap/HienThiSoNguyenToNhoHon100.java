@@ -1,4 +1,4 @@
-package ss2_Loop.baitap;
+package ss2_Loop.bai_tap;
 
 public class HienThiSoNguyenToNhoHon100 {
     public static void main(String[] args) {
