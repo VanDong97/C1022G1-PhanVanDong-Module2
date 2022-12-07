@@ -1,4 +1,4 @@
-package ss5_Class_Object_Access_Modefier.bai_tap.QuadraticEquation;
+package ss5_Class_Object.bai_tap.QuadraticEquation;
 
 import java.util.Scanner;
 

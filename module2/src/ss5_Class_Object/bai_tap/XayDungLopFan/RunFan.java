@@ -1,4 +1,4 @@
-package ss5_Class_Object_Access_Modefier.bai_tap.XayDungLopFan;
+package ss5_Class_Object.bai_tap.XayDungLopFan;
 
 public class RunFan {
     public static void main(String[] args) {

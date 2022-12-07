@@ -1,6 +1,4 @@
-package ss5_Class_Object_Access_Modefier.bai_tap.QuadraticEquation;
-
-import sun.security.x509.DeltaCRLIndicatorExtension;
+package ss5_Class_Object.bai_tap.QuadraticEquation;
 
 public class QuadraticEquation {
     private double a;
