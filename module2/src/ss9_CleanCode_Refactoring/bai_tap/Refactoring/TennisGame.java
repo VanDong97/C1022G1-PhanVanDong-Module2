@@ -1,14 +1,11 @@
 package ss9_CleanCode_Refactoring.bai_tap.Refactoring;
 
 public class TennisGame {
-
-    public static final String SCORE = "-";
-
-    public static String getScore(String playName1, String playName2, int score1, int score2) {
+    public static String getScore(String playerName1, String playerName2, int mScore1, int mScore2) {
         String score = "";
         int tempScore = 0;
-        if (score1 == score2) {
-            switch (score1) {
+        if (mScore1 == mScore2) {
+            switch (mScore1) {
                 case 0:
                     score = "Love-All";
                     break;
@@ -24,14 +21,25 @@ public class TennisGame {
                 default:
                     score = "Deuce";
                     break;
+
+            }
+        } else if (mScore1 >= 4 || mScore2 >= 4) {
+            int minusResult = mScore1 - mScore2;
+            if (minusResult == 1) {
+                score = "Advantage player1";
+            } else if (minusResult == -1) {
+                score = "Advantage player2";
+            } else if (minusResult >= 2) {
+                score = "Win for player1";
+            } else {
+                score = "Win for player2";
             }
         } else {
             for (int i = 1; i < 3; i++) {
-                if (i == 1) {
-                    tempScore = score1;
-                } else {
-                    score += SCORE;
-                    tempScore = score2;
+                if (i == 1) tempScore = mScore1;
+                else {
+                    score += "-";
+                    tempScore = mScore2;
                 }
                 switch (tempScore) {
                     case 0:
