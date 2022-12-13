@@ -1,6 +1,6 @@
 package ss8_Absclass_Interface.bai_tap.Interface_Resizeable;
 
-public class Geometry implements IResizeable {
+public abstract class  Geometry implements IResizeable {
     private String color;
 
     public Geometry() {

@@ -1,6 +1,6 @@
 package ss8_Absclass_Interface.bai_tap.Interface_Colorable;
 
-public class Rectangle extends Geometry2 implements IColorable {
+public class Rectangle extends Geometry2 {
     private double height;
     private double weidth;
 
@@ -32,20 +32,11 @@ public class Rectangle extends Geometry2 implements IColorable {
     }
 
     @Override
-    public String howToColor() {
-
-        if (this.isFill()) {
-            return "Color all four sides..";
-        } else {
-            return "No color";
-        }
-    }
-
-    @Override
     public String toString() {
         return "Rectangle{" +
                 "height=" + height +
                 ", weidth=" + weidth +
-                "color :" + this.howToColor() + "}";
+                '}';
     }
 }
+

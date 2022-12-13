@@ -1,6 +1,6 @@
 package ss8_Absclass_Interface.bai_tap.Interface_Resizeable;
 
-public class Square extends Geometry implements IResizeable {
+public class Square extends Geometry {
     private int edge;
 
     public Square() {
