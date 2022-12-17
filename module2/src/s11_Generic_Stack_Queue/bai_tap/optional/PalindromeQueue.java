@@ -2,7 +2,7 @@ package s11_Generic_Stack_Queue.bai_tap.optional;
 
 import java.util.*;
 
-public class Palindrome_Queue {
+public class PalindromeQueue {
     public static void main(String[] args) {
         Queue<String> elementQ = new LinkedList<>();
 
