@@ -34,7 +34,7 @@ public class ThuatToanTimKiemNhiPhan {
         if (check != -1) {
             System.out.println("Số cần tìm ở vị trí là " + check);
         } else {
-            System.out.println("Số cần tìm" + num + " không có trong mảng");
+            System.out.println("Số cần tìm " + num + " không có trong mảng");
         }
     }
 }
