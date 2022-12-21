@@ -3,7 +3,7 @@ package ss14_Thuat_toan_sap_xep.bai_tap;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class CaiDatSapXepChen {
+public class InsertSortSettings {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Nhập độ dài mảng: ");

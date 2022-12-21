@@ -2,7 +2,7 @@ package ss14_Thuat_toan_sap_xep.bai_tap;
 
 import java.util.Arrays;
 
-public class MinhHoaSapXepChen {
+public class InsertSortIllustration {
     void sort(int arr[]) {
         int n = arr.length;
         for (int i = 1; i < n; i++) {
@@ -28,7 +28,7 @@ public class MinhHoaSapXepChen {
         int arr[] = {5, 7, 8, 15, 10, 16, 9, 4};
         System.out.println("Mảng ban đầu " + Arrays.toString(arr));
 
-        MinhHoaSapXepChen insertionSort = new MinhHoaSapXepChen();
+        InsertSortIllustration insertionSort = new InsertSortIllustration();
 
         insertionSort.sort(arr);
 
