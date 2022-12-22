@@ -23,6 +23,10 @@ public class CheckIllegalArgumentExcaption {
 
         } catch (IllegalTriangleException exception) {
             System.out.println("a , b , c không phải là cạnh của tam giác");
+        }catch (NumberFormatException exception) {
+            System.out.println(" NumberFormatException ");
+        }catch (Exception exception){
+            System.out.println("Exception");
         }finally {
             System.out.println("---Chương trình kết thúc---");
         }
