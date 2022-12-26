@@ -2,7 +2,7 @@ package ss17_IO_BinaryFile_Serialization.bai_tap.Product_Management.model;
 
 import java.io.Serializable;
 
-public class ProductManagement implements Comparable<ProductManagement> {
+public class ProductManagement implements Serializable {
     private int id;
     private String name;
     private String company;
@@ -71,8 +71,4 @@ public class ProductManagement implements Comparable<ProductManagement> {
                 '}';
     }
 
-    @Override
-    public int compareTo(ProductManagement o) {
-        return (int) (this.price - o.getPrice());
-    }
 }

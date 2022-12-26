@@ -27,25 +27,14 @@ public class ProductStreamCotroller {
 
             switch (choice){
                 case 1:
-                    System.out.println("Nhập ID : ");
-                    int id = Integer.parseInt(scanner.nextLine());
-                    System.out.println("Nhập Name : ");
-                    String name = scanner.nextLine();
-                    System.out.println("Nhập Company : ");
-                    String company = scanner.nextLine();
-                    System.out.println("Nhập Price : ");
-                    int price = Integer.parseInt(scanner.nextLine());
-                    System.out.println("Nhập Color : ");
-                    String color = scanner.nextLine();
-                    ProductManagement productManagement = new ProductManagement(id,name,company,price,color);
-                    service.addProduct(productManagement);
+                    service.addProduct();
                     break;
                 case 2:
                     service.displayProduct();
                     break;
                 case 3:
                     System.out.println("Nhập tên sản phẩm");
-                    name = scanner.nextLine();
+                    String name = scanner.nextLine();
                     service.searchProduct(name);
                     break;
                 case 4:

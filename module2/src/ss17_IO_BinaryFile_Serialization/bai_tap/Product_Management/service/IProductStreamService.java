@@ -5,21 +5,10 @@ import ss17_IO_BinaryFile_Serialization.bai_tap.Product_Management.model.Product
 
 public interface IProductStreamService {
 
-    void addProduct(Product product);
-
-    Product findById (int id);
-
-    void findByName (String name);
-
-    void findByCompany (String company);
-
-    void findByPrice (int price);
-
-    void findByColor (String color);
+    void addProduct();
 
     void displayProduct();
 
     void searchProduct(String name);
 
-    void addProduct(ProductManagement productManagement);
 }
