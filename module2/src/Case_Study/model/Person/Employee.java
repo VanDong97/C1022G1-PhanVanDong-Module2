@@ -2,12 +2,12 @@ package Case_Study.model.Person;
 
 public class Employee extends Person{
 
-    private String employeeCode;
+    private int employeeCode;
     private String level;
     private String location;
     private String wage;
 
-    public Employee(String name, String dateOfBirth, String gender, String CMND, String phoneNumber, String email, String employeeCode, String level, String location, String wage) {
+    public Employee(int employeeCode, String name, String dateOfBirth, String gender, String CMND, String phoneNumber, String email, String level, String location, String wage) {
         super(name, dateOfBirth, gender, CMND, phoneNumber, email);
         this.employeeCode = employeeCode;
         this.level = level;
@@ -15,11 +15,11 @@ public class Employee extends Person{
         this.wage = wage;
     }
 
-    public String getEmployeeCode() {
+    public int getEmployeeCode() {
         return employeeCode;
     }
 
-    public void setEmployeeCode(String employeeCode) {
+    public void setEmployeeCode(int employeeCode) {
         this.employeeCode = employeeCode;
     }
 
@@ -54,7 +54,6 @@ public class Employee extends Person{
                 ", level='" + level + '\'' +
                 ", location='" + location + '\'' +
                 ", wage='" + wage + '\'' +
-                '}';
+                "} " + super.toString();
     }
-
 }

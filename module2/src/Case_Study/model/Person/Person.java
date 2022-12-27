@@ -4,7 +4,7 @@ public abstract class Person {
     private String name;
     private String dateOfBirth;
     private String gender;
-    private String CMND;
+    private String cMND;
     private String phoneNumber;
     private String email;
 
@@ -12,7 +12,7 @@ public abstract class Person {
         this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.gender = gender;
-        this.CMND = CMND;
+        this.cMND = CMND;
         this.phoneNumber = phoneNumber;
         this.email = email;
     }
@@ -42,11 +42,11 @@ public abstract class Person {
     }
 
     public String getCMND() {
-        return CMND;
+        return cMND;
     }
 
     public void setCMND(String CMND) {
-        this.CMND = CMND;
+        this.cMND = CMND;
     }
 
     public String getPhoneNumber() {
@@ -71,7 +71,7 @@ public abstract class Person {
                 "name='" + name + '\'' +
                 ", dateOfBirth='" + dateOfBirth + '\'' +
                 ", gender='" + gender + '\'' +
-                ", CMND='" + CMND + '\'' +
+                ", CMND='" + cMND + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", email='" + email + '\'' +
                 '}';

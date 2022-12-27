@@ -29,14 +29,19 @@ public class FuramaController {
                     break;
                 case 2:
                     CustomerController.customer();
+                    break;
                 case 3:
                     FacilityController.facility();
+                    break;
                 case 4:
                     BookingController.booking();
+                    break;
                 case 5:
                     PromotionController.promotion();
+                    break;
                 case 6:
                     System.exit(0);
+                    break;
                 default:
                     System.out.println("Nhập số không hợp lệ  :(( ");
             }
