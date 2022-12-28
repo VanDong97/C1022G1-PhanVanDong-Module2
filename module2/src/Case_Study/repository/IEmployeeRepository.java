@@ -1,8 +1,8 @@
-package Case_Study.service;
+package Case_Study.repository;
 
 import Case_Study.model.Person.Employee;
 
-public interface IEmployeeService {
+public interface IEmployeeRepository {
     void displayEmployee();
 
     void addEmployee(Employee employee);
@@ -11,5 +11,5 @@ public interface IEmployeeService {
 
     void editEmployee(Employee employee);
 
-    Employee search(int id);
+    Employee search(String id);
 }

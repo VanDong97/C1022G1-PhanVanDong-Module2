@@ -77,4 +77,5 @@ public abstract class Person {
                 '}';
     }
 
+    public abstract void setCustomerCode(int i, Customer customer);
 }

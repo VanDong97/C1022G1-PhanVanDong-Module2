@@ -1,18 +1,18 @@
 package Case_Study.model.Facility;
 
-import Case_Study.model.Facility.Facility;
-import Case_Study.model.treatment.RentalType;
-
 public class Villa extends Facility {
     private String roomStandard;
-    private double swimmingPoolArea;
-    private int numberOfFloors;
+    private String swimmingPoolArea;
+    private String numberOfFloors;
 
-    public Villa(String serviceName, double area, double rentalCosts, int maxPeople, RentalType rentalType, String roomStandard, double swimmingPoolArea, int numberOfFloors) {
+    public Villa(String serviceName, String area, String rentalCosts, String maxPeople, String rentalType, String roomStandard, String swimmingPoolArea, String numberOfFloors) {
         super(serviceName, area, rentalCosts, maxPeople, rentalType);
         this.roomStandard = roomStandard;
         this.swimmingPoolArea = swimmingPoolArea;
         this.numberOfFloors = numberOfFloors;
+    }
+
+    public Villa(String name, String area, String retanlCosts, String maxpeople, String rentalType, String freeService, String numberOfUses) {
     }
 
     public String getRoomStandard() {
@@ -23,19 +23,19 @@ public class Villa extends Facility {
         this.roomStandard = roomStandard;
     }
 
-    public double getSwimmingPoolArea() {
+    public String getSwimmingPoolArea() {
         return swimmingPoolArea;
     }
 
-    public void setSwimmingPoolArea(double swimmingPoolArea) {
+    public void setSwimmingPoolArea(String swimmingPoolArea) {
         this.swimmingPoolArea = swimmingPoolArea;
     }
 
-    public int getNumberOfFloors() {
+    public String getNumberOfFloors() {
         return numberOfFloors;
     }
 
-    public void setNumberOfFloors(int numberOfFloors) {
+    public void setNumberOfFloors(String numberOfFloors) {
         this.numberOfFloors = numberOfFloors;
     }
 
@@ -43,8 +43,8 @@ public class Villa extends Facility {
     public String toString() {
         return "Villa{" +
                 "roomStandard='" + roomStandard + '\'' +
-                ", swimmingPoolArea=" + swimmingPoolArea +
-                ", numberOfFloors=" + numberOfFloors +
-                '}';
+                ", swimmingPoolArea='" + swimmingPoolArea + '\'' +
+                ", numberOfFloors='" + numberOfFloors + '\'' +
+                "} " + super.toString();
     }
 }

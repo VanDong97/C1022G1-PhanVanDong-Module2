@@ -1,11 +1,11 @@
 package Case_Study.model.Person;
 
-public class Customer extends Person{
+public class Customer extends Person {
     private String customerCode;
     private String customerType;
     private String address;
 
-    public Customer(String name, String dateOfBirth, String gender, String CMND, String phoneNumber, String email, String customerCode, String customerType, String address) {
+    public Customer(String customerCode, String name, String dateOfBirth, String gender, String CMND, String phoneNumber, String email, String customerType, String address) {
         super(name, dateOfBirth, gender, CMND, phoneNumber, email);
         this.customerCode = customerCode;
         this.customerType = customerType;
@@ -42,7 +42,11 @@ public class Customer extends Person{
                 "customerCode='" + customerCode + '\'' +
                 ", customerType='" + customerType + '\'' +
                 ", address='" + address + '\'' +
-                '}';
+                "} " + super.toString();
     }
 
+    @Override
+    public void setCustomerCode(int i, Customer customer) {
+
+    }
 }

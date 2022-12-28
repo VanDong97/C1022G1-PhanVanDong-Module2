@@ -1,15 +1,13 @@
 package Case_Study.model.Facility;
 
-import Case_Study.model.treatment.RentalType;
-
 public abstract class Facility {
     private String serviceName;
-    private double area;
-    private double rentalCosts;
-    private int maxPeople;
-    private RentalType rentalType;
+    private String area;
+    private String rentalCosts;
+    private String maxPeople;
+    private String rentalType;
 
-    public Facility(String serviceName, double area, double rentalCosts, int maxPeople, RentalType rentalType) {
+    public Facility(String serviceName, String area, String rentalCosts, String maxPeople, String rentalType) {
         this.serviceName = serviceName;
         this.area = area;
         this.rentalCosts = rentalCosts;
@@ -28,35 +26,35 @@ public abstract class Facility {
         this.serviceName = serviceName;
     }
 
-    public double getArea() {
+    public String getArea() {
         return area;
     }
 
-    public void setArea(double area) {
+    public void setArea(String area) {
         this.area = area;
     }
 
-    public double getRentalCosts() {
+    public String getRentalCosts() {
         return rentalCosts;
     }
 
-    public void setRentalCosts(double rentalCosts) {
+    public void setRentalCosts(String rentalCosts) {
         this.rentalCosts = rentalCosts;
     }
 
-    public int getMaxPeople() {
+    public String getMaxPeople() {
         return maxPeople;
     }
 
-    public void setMaxPeople(int maxPeople) {
+    public void setMaxPeople(String maxPeople) {
         this.maxPeople = maxPeople;
     }
 
-    public RentalType getRentalType() {
+    public String getRentalType() {
         return rentalType;
     }
 
-    public void setRentalType(RentalType rentalType) {
+    public void setRentalType(String rentalType) {
         this.rentalType = rentalType;
     }
 
@@ -69,30 +67,5 @@ public abstract class Facility {
                 ", maxPeople=" + maxPeople +
                 ", rentalType=" + rentalType +
                 '}';
-    }
-
-    public static class Room extends Facility {
-        private String freeService;
-
-        public Room(String serviceName, double area, double rentalCosts, int maxPeople, RentalType rentalType, String freeService) {
-            super(serviceName, area, rentalCosts, maxPeople, rentalType);
-            this.freeService = freeService;
-        }
-
-        public String getFreeService() {
-            return freeService;
-        }
-
-        public void setFreeService(String freeService) {
-            this.freeService = freeService;
-        }
-
-        @Override
-        public String toString() {
-            return "Room{" +
-                    "freeService='" + freeService + '\'' +
-                    '}';
-        }
-
     }
 }
