@@ -13,15 +13,15 @@ public class FacilityRepository implements IFacilityRepository {
     public static Map<Villa, String> villaStringMap = new LinkedHashMap<>();
 
     static {
-        roomStringMap.put(new Room("Vip1", "15", "15", "2", "2018,12,12", "free fruits", "5"), "5");
-        roomStringMap.put(new Room("Vip2", "15", "20", "3", "2019, 11, 11", "free water", "3"), "4");
-        roomStringMap.put(new Room("Vip3", "15", "25", "4", "2020, 10, 10", "free fruits & water", "4"), "3");
-        roomStringMap.put(new Room("Vip4", "15", "30", "4", "2021, 9, 9", "free food", "5"), "5");
+        roomStringMap.put(new Room("SVRO-0001", "30m2", "15.000", "2", "Day", "free fruits"), "5");
+        roomStringMap.put(new Room("SVRO-0002", "35m2", "20.000", "3", "month", "free water"), "4");
+        roomStringMap.put(new Room("SVRO-0003", "40m2", "25.000", "4", "month", "free fruits & water"), "3");
+        roomStringMap.put(new Room("SVRO-0004", "50m2", "30.000", "4", "year", "free food"), "5");
 
-        villaStringMap.put(new Villa("Pro1", "100", "50", "3", "2015,1,2", "3*", "10", "3"), "2");
-        villaStringMap.put(new Villa("Pro2", "150", "60", "4", "2016,2,3", "4*", "15", "4"), "5");
-        villaStringMap.put(new Villa("Pro3", "200", "70", "5", "2017,3,4", "4*", "17", "4"), "4");
-        villaStringMap.put(new Villa("Pro4", "250", "80", "6", "2018,4,5", "5*", "20", "5"), "5");
+        villaStringMap.put(new Villa("SVVL-0001", "100m2", "50.000", "3", "month", "3*", "10m2","4"), "2");
+        villaStringMap.put(new Villa("SVVL-0002", "150m2", "60.000", "4", "month", "4*", "15m2","5"), "5");
+        villaStringMap.put(new Villa("SVVl-0003", "200m2", "70.000", "5", "year", "4*", "17m2","6"), "4");
+        villaStringMap.put(new Villa("SVVL-0004", "250m2", "80.000", "6", "year", "5*", "20m2","7"), "6");
     }
 
     @Override

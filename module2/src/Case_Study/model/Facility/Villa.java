@@ -5,15 +5,14 @@ public class Villa extends Facility {
     private String swimmingPoolArea;
     private String numberOfFloors;
 
-    public Villa(String serviceName, String area, String rentalCosts, String maxPeople, String rentalType, String roomStandard, String swimmingPoolArea, String numberOfFloors) {
+    public Villa(String serviceName, String area, String rentalCosts, String maxPeople, String rentalType,
+                 String roomStandard, String swimmingPoolArea, String numberOfFloors) {
         super(serviceName, area, rentalCosts, maxPeople, rentalType);
         this.roomStandard = roomStandard;
         this.swimmingPoolArea = swimmingPoolArea;
         this.numberOfFloors = numberOfFloors;
     }
 
-    public Villa(String name, String area, String retanlCosts, String maxpeople, String rentalType, String freeService, String numberOfUses) {
-    }
 
     public String getRoomStandard() {
         return roomStandard;
@@ -41,10 +40,10 @@ public class Villa extends Facility {
 
     @Override
     public String toString() {
-        return "Villa{" +
+        return "Villa{" + super.toString() +
                 "roomStandard='" + roomStandard + '\'' +
                 ", swimmingPoolArea='" + swimmingPoolArea + '\'' +
                 ", numberOfFloors='" + numberOfFloors + '\'' +
-                "} " + super.toString();
+                "} ";
     }
 }
