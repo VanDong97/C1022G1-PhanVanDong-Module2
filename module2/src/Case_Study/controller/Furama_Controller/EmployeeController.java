@@ -12,12 +12,13 @@ public class EmployeeController {
 
     public static void employee() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("1.Display list employees\n" +
-                "2.Add new employee\n" +
-                "3.Delete employee\n" +
-                "4.Edit employee\n" +
-                "5.Return main menu\n");
+
         do {
+            System.out.println("1.Display list employees\n" +
+                    "2.Add new employee\n" +
+                    "3.Delete employee\n" +
+                    "4.Edit employee\n" +
+                    "5.Return main menu\n");
             int select = Integer.parseInt(scanner.nextLine());
             switch (select) {
                 case 1:

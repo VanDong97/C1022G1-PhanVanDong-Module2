@@ -7,9 +7,9 @@ import Case_Study.model.Facility.Villa;
 public interface IFacilityRepository extends IFuramaRepository {
     void displayFacility();
 
-    void addNewRoom(Room room, String time);
+    void addNewRoom(Room room, int time);
 
-    void addNewVilla(Villa villa, String time);
+    void addNewVilla(Villa villa, int time);
 
     void listFacilityMaintenance();
 

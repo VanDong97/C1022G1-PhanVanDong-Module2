@@ -68,4 +68,8 @@ public abstract class Facility {
                 ", rentalType=" + rentalType +
                 '}';
     }
+    public String converLine(){
+        return this.serviceName + "," + this.area + "," + this.rentalCosts + "," + this.rentalCosts
+                + "," + this.maxPeople + "," + this.rentalType;
+    }
 }

@@ -12,11 +12,11 @@ public class CustomerController {
 
     public static void customer() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("1.Display list customers\n" +
-                "2.Add new customer\n" +
-                "3.Edit customer\n" +
-                "4.Return main menu\n");
         do {
+            System.out.println("1.Display list customers\n" +
+                    "2.Add new customer\n" +
+                    "3.Edit customer\n" +
+                    "4.Return main menu\n");
             int select = Integer.parseInt(scanner.nextLine());
             switch (select) {
                 case 1:

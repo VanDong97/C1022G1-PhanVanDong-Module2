@@ -13,6 +13,9 @@ public class Villa extends Facility {
         this.numberOfFloors = numberOfFloors;
     }
 
+    public Villa(String name, String area, String rentalCosts, String maxPeople, String rentalType, String roomStandard, String swimmingPoolArea) {
+    }
+
 
     public String getRoomStandard() {
         return roomStandard;
@@ -45,5 +48,8 @@ public class Villa extends Facility {
                 ", swimmingPoolArea='" + swimmingPoolArea + '\'' +
                 ", numberOfFloors='" + numberOfFloors + '\'' +
                 "} ";
+    }
+    public String formatVillaCSV(){
+        return super.converLine() + "," + this.roomStandard + "," + this.swimmingPoolArea + "," + this.numberOfFloors;
     }
 }

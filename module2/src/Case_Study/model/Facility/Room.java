@@ -23,4 +23,7 @@ public class Room extends Facility {
                 "freeService='" + freeService + '\'' +
                 "} ";
     }
+    public String formatRoomCSV(){
+        return super.converLine() + "," + this.freeService;
+    }
 }

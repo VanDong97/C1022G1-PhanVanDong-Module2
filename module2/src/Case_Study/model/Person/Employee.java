@@ -58,38 +58,6 @@ public class Employee extends Person {
         this.wage = wage;
     }
 
-    //    public String getEmployeeCode() {
-//        return employeeCode;
-//    }
-//
-//    public void setEmployeeCode(String employeeCode) {
-//        this.employeeCode = employeeCode;
-//    }
-//
-//    public String getLevel() {
-//        return level;
-//    }
-//
-//    public void setLevel(String level) {
-//        this.level = level;
-//    }
-//
-//    public String getLocation() {
-//        return location;
-//    }
-//
-//    public void setLocation(String location) {
-//        this.location = location;
-//    }
-//
-//    public String getWage() {
-//        return wage;
-//    }
-//
-//    public void setWage(String wage) {
-//        this.wage = wage;
-//    }
-//
     @Override
     public void setCustomerCode(int i, Customer customer) {
 
@@ -97,12 +65,12 @@ public class Employee extends Person {
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "employeeCode='" + employeeCode + '\'' +
+        return "Employee{" + "employeeCode='" + employeeCode +
+                super.toString() +
                 ", level='" + level + '\'' +
                 ", location='" + location + '\'' +
                 ", wage='" + wage + '\'' +
                 ", position='" + position + '\'' +
-                "} " + super.toString();
+                "} ";
     }
 }

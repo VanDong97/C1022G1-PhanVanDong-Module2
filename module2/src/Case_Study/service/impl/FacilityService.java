@@ -17,12 +17,12 @@ public class FacilityService implements IFacilityService {
     }
 
     @Override
-    public void addNewRoom(Room room, String time) {
+    public void addNewRoom(Room room, int time) {
         facilityRepository.addNewRoom(room, time);
     }
 
     @Override
-    public void addNewVilla(Villa villa, String time) {
+    public void addNewVilla(Villa villa, int time) {
         facilityRepository.addNewVilla(villa, time);
     }
 

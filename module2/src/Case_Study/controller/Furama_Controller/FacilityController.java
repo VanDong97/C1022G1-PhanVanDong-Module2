@@ -16,11 +16,12 @@ public class FacilityController {
 
     public static void facility() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("1.Display list facility\n" +
-                "2.Add new facility\n" +
-                "3.Display list facility maintenance\n" +
-                "4.Return main menu\n");
+
         do {
+            System.out.println("1.Display list facility\n" +
+                    "2.Add new facility\n" +
+                    "3.Display list facility maintenance\n" +
+                    "4.Return main menu\n");
             int select = Integer.parseInt(scanner.nextLine());
             switch (select) {
                 case 1:
@@ -72,11 +73,16 @@ public class FacilityController {
                                 swimmingPoolArea = scanner.nextLine();
                             } while (!Regex.checkArea(swimmingPoolArea));
 
-                            System.out.println("INPUT NUMBER OF FLOORS : ");
-                            String numberOfFloos = scanner.nextLine();
+                            String numberOfFloos;
+                            do {
+                                System.out.println("INPUT NUMBER OF FLOORS : ");
+                                numberOfFloos = scanner.nextLine();
+                            }while (!Regex.checkNumberOfFloors(numberOfFloos));
+
+
                             System.out.println("INPUT NUMBER OF USES :");
-                            String numberOfUses = scanner.nextLine();
-                            Villa villa = new Villa(name, area, retanlCosts, maxPeople, rentalType, roomStandard, swimmingPoolArea, numberOfFloos);
+                            int numberOfUses = Integer.parseInt(scanner.nextLine());
+                            Villa villa = new Villa(name, area, retanlCosts, maxPeople, rentalType,roomStandard,swimmingPoolArea,numberOfFloos);
                             facilityService.addNewVilla(villa, numberOfUses);
                             break;
                         case 2:
@@ -114,7 +120,7 @@ public class FacilityController {
                             System.out.println("INPUT FREE SERVICE : ");
                             String freeService1 = scanner.nextLine();
                             System.out.println("INPUT NUMBER OF USES : ");
-                            String numberOfUses1 = scanner.nextLine();
+                            int numberOfUses1 = Integer.parseInt(scanner.nextLine());
                             Room room = new Room(name1, area1, retalCosts1, maxPeople1, rentalType1, freeService1);
                             facilityService.addNewRoom(room, numberOfUses1);
                             break;
