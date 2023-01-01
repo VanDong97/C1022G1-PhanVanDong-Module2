@@ -2,10 +2,7 @@ package Case_Study.utils;
 
 import Case_Study.model.Facility.Villa;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -50,5 +47,24 @@ public class VillaFile {
         return villaList;
     }
 
-    public static 
+    public static void writeCSV(Map<Villa, Integer> villa) {
+        FileWriter fileWriter = null;
+        BufferedWriter bufferedWriter = null;
+        try {
+            fileWriter = new FileWriter(FIFE_PATH_VILLA);
+            bufferedWriter = new BufferedWriter(fileWriter);
+            for (Map.Entry<Villa, Integer> entry : villa.entrySet()) {
+                bufferedWriter.write(entry.getKey() + "," + entry.getValue());
+                bufferedWriter.newLine();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                bufferedWriter.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 }
