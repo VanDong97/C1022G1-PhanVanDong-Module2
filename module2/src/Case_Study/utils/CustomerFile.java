@@ -58,6 +58,7 @@ public class CustomerFile {
                             + "," + cst.getCMND() + "," + cst.getPhoneNumber() + ","
                             + cst.getEmail() + "," + cst.getCustomerType()
                             + "," + cst.getAddress());
+                    bufferedWriter.newLine();
             }
         } catch (Exception exception) {
             exception.printStackTrace();

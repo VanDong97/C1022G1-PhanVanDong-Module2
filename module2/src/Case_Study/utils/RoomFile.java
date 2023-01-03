@@ -19,20 +19,17 @@ public class RoomFile {
             fileReader = new FileReader(FIFE_PATH_ROOM);
             bufferedReader = new BufferedReader(fileReader);
             String line;
-            String[] temp;
-            Room room;
 
             while ((line = bufferedReader.readLine()) != null) {
-                temp = line.split(",");
+               String[] temp = line.split(",");
                 String name = temp[0];
                 String area = temp[1];
                 String rentalCosts = temp[2];
                 String maxPeople = temp[3];
                 String rentalType = temp[4];
                 String freeService = temp[5];
-                Integer numberOfUses = Integer.valueOf(temp[6]);
-                room = new Room(name, area, rentalCosts, maxPeople, rentalType, freeService);
-                roomList.put(room, numberOfUses);
+               Room room = new Room(name, area, rentalCosts, maxPeople, rentalType, freeService);
+                roomList.put(room, Integer.parseInt(temp[6]));
             }
         } catch (IIOException | FileNotFoundException e) {
             e.printStackTrace();

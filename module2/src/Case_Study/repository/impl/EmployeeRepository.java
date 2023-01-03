@@ -13,9 +13,9 @@ public class EmployeeRepository implements IEmployeeRepository {
 
     @Override
     public void displayEmployee() {
-        employeeList = EmployeeFile.readCSV();
-        for (Employee e : employeeList) {
-            System.out.println(e);
+        List<Employee> employeeList1 = EmployeeFile.readCSV();
+        for (Employee epl: employeeList1) {
+            System.out.println(epl);
         }
     }
 

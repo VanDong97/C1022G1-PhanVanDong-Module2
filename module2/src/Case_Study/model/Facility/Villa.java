@@ -1,28 +1,28 @@
 package Case_Study.model.Facility;
 
 public class Villa extends Facility {
-    private String roomStandard;
+    private String villaStandard;
     private String swimmingPoolArea;
     private String numberOfFloors;
 
     public Villa(String serviceName, String area, String rentalCosts, String maxPeople, String rentalType,
-                 String roomStandard, String swimmingPoolArea, String numberOfFloors) {
+                 String villaStandard, String swimmingPoolArea, String numberOfFloors) {
         super(serviceName, area, rentalCosts, maxPeople, rentalType);
-        this.roomStandard = roomStandard;
+        this.villaStandard = villaStandard;
         this.swimmingPoolArea = swimmingPoolArea;
         this.numberOfFloors = numberOfFloors;
     }
 
-    public Villa(String name, String area, String rentalCosts, String maxPeople, String rentalType, String roomStandard, String swimmingPoolArea) {
+    public Villa(String name, String area, String rentalCosts, String maxPeople, String rentalType, String villaStandard, String swimmingPoolArea) {
     }
 
 
     public String getRoomStandard() {
-        return roomStandard;
+        return villaStandard;
     }
 
     public void setRoomStandard(String roomStandard) {
-        this.roomStandard = roomStandard;
+        this.villaStandard = roomStandard;
     }
 
     public String getSwimmingPoolArea() {
@@ -43,13 +43,12 @@ public class Villa extends Facility {
 
     @Override
     public String toString() {
-        return "Villa{" + super.toString() +
-                "roomStandard='" + roomStandard + '\'' +
-                ", swimmingPoolArea='" + swimmingPoolArea + '\'' +
-                ", numberOfFloors='" + numberOfFloors + '\'' +
-                "} ";
+        return super.toString() +
+                ", villaStandard :" + villaStandard +
+                ", swimmingPoolArea :" + swimmingPoolArea +
+                ", numberOfFoors :" + numberOfFloors;
     }
     public String formatVillaCSV(){
-        return super.converLine() + "," + this.roomStandard + "," + this.swimmingPoolArea + "," + this.numberOfFloors;
+        return super.converLine() + "," + this.villaStandard + "," + this.swimmingPoolArea + "," + this.numberOfFloors;
     }
 }

@@ -58,18 +58,18 @@ public abstract class Facility {
         this.rentalType = rentalType;
     }
 
+
     @Override
     public String toString() {
-        return "Facility{" +
-                "serviceName='" + serviceName + '\'' +
-                ", area=" + area +
-                ", rentalCosts=" + rentalCosts +
-                ", maxPeople=" + maxPeople +
-                ", rentalType=" + rentalType +
-                '}';
+        return "serviceName='" + serviceName + '\'' +
+                ", area='" + area + '\'' +
+                ", rentalCosts='" + rentalCosts + '\'' +
+                ", maxPeople='" + maxPeople + '\'' +
+                ", rentalType='" + rentalType + '\'';
     }
+
     public String converLine(){
-        return this.serviceName + "," + this.area + "," + this.rentalCosts + "," + this.rentalCosts
+        return this.serviceName + "," + this.area + "," + this.rentalCosts
                 + "," + this.maxPeople + "," + this.rentalType;
     }
 }
