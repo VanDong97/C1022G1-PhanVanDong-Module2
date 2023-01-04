@@ -2,6 +2,7 @@ package Case_Study.controller.Furama_Controller;
 
 import Case_Study.controller.FuramaController;
 import Case_Study.model.Person.Employee;
+import Case_Study.regex.NotFoundException;
 import Case_Study.repository.IEmployeeRepository;
 import Case_Study.repository.impl.EmployeeRepository;
 
@@ -52,9 +53,19 @@ public class EmployeeController {
                         employeeRepository.addEmployee(employee);
                         break;
                     case 3:
-                        System.out.println("INPUT ID : ");
-                        String id = scanner.nextLine();
-                        employeeRepository.deleteEmployee(id);
+                        String id;
+                            System.out.println("INPUT ID : ");
+                            id = scanner.nextLine();
+                            if (employeeRepository.findById(id) != null) {
+                                employeeRepository.deleteEmployee(id);
+                            } else {
+                                try {
+                                    throw new NotFoundException("NotFoundException");
+                                } catch (NotFoundException e) {
+                                    System.out.println(e.getMessage());
+                                }
+                            }
+                            break;
                     case 4:
                         System.out.println("INPUT ID ");
                         String id1 = scanner.nextLine();

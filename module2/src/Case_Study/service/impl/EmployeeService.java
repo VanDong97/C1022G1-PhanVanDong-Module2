@@ -19,6 +19,11 @@ public class EmployeeService implements IEmployeeService {
     }
 
     @Override
+    public Employee findById(String id) {
+        return iEmployeeRepository.findById(id);
+    }
+
+    @Override
     public void deleteEmployee(String id) {
         iEmployeeRepository.deleteEmployee(id);
     }

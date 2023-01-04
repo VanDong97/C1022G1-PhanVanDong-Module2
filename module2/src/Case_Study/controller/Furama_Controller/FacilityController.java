@@ -39,36 +39,46 @@ public class FacilityController {
                                 do {
                                     System.out.println("INPUT SERVICE NAME :");
                                     name = scanner.nextLine();
-                                    System.out.println("Enter the wrong name, please re-enter : ");
-                                } while (!Regex.checkVillaName(name));
+                                    if (!name.matches(Regex.REGEX_VILLA_NAME)){
+                                        System.out.println("Enter the wrong name, please re-enter");
+                                    }
+                                } while (!name.matches(Regex.REGEX_VILLA_NAME));
 
                                 String area;
                                 do {
                                     System.out.println("INPUT AREA : ");
                                     area = scanner.nextLine();
-                                    System.out.println("Enter the wrong area, please re-enter");
-                                } while (!Regex.checkArea(area));
+                                    if (!area.matches(Regex.REGEX_AREA)){
+                                        System.out.println("Enter the wrong area, please re-enter");
+                                    }
+                                } while (!area.matches(Regex.REGEX_AREA));
 
                                 String retanlCosts;
                                 do {
                                     System.out.println("INPUT RENTAL COSTS :");
                                     retanlCosts = scanner.nextLine();
-                                    System.out.println("Enter the wrong rental costs, please re-enter");
-                                } while (!Regex.checkRentalCosts(retanlCosts));
+                                    if (!retanlCosts.matches(Regex.REGEX_RENTAL_COSTS)){
+                                        System.out.println("Enter the wrong rental costs, please re-enter");
+                                    }
+                                } while (!retanlCosts.matches(Regex.REGEX_RENTAL_COSTS));
 
                                 String maxPeople;
                                 do {
                                     System.out.println("INPUT MAX PEOPLE :");
                                     maxPeople = scanner.nextLine();
-                                    System.out.println("Enter the wrong max people, please re-enter");
-                                } while (!Regex.checkMaxPeople(maxPeople));
+                                    if (!maxPeople.matches(Regex.REGEX_MAX_PEOPLE)){
+                                        System.out.println("Enter the wrong max people, please re-enter");
+                                    }
+                                } while (!maxPeople.matches(Regex.REGEX_MAX_PEOPLE));
 
                                 String rentalType;
                                 do {
                                     System.out.println("INPUT RENTAL TYPE :");
                                     rentalType = scanner.nextLine();
-                                    System.out.println("Enter the wrong rental type, please re-enter");
-                                } while (!Regex.checkRentalType(rentalType));
+                                    if (!rentalType.matches(Regex.REGEX_RENTAL_TYPE)){
+                                        System.out.println("Enter the wrong rental type, please re-enter");
+                                    }
+                                } while (!rentalType.matches(Regex.REGEX_RENTAL_TYPE));
 
                                 System.out.println("INPUT VILLA STANDARD :");
                                 String villaStandard = scanner.nextLine();
@@ -77,15 +87,19 @@ public class FacilityController {
                                 do {
                                     System.out.println("INPUT SWIMMING POOL AREA :");
                                     swimmingPoolArea = scanner.nextLine();
-                                    System.out.println("Enter the wrong swimming pool area, please re-enter");
-                                } while (!Regex.checkArea(swimmingPoolArea));
+                                    if (!swimmingPoolArea.matches(Regex.REGEX_AREA)){
+                                        System.out.println("Enter the wrong swimming pool area, please re-enter");
+                                    }
+                                } while (!swimmingPoolArea.matches(Regex.REGEX_AREA));
 
                                 String numberOfFloos;
                                 do {
                                     System.out.println("INPUT NUMBER OF FLOORS : ");
                                     numberOfFloos = scanner.nextLine();
-                                    System.out.println("Enter the wrong number of floors, please re-enter");
-                                } while (!Regex.checkNumberOfFloors(numberOfFloos));
+                                    if (!numberOfFloos.matches(Regex.REGEX_NUMBER_OF_FLOORS)){
+                                        System.out.println("Enter the wrong number of floors, please re-enter");
+                                    }
+                                } while (!numberOfFloos.matches(Regex.REGEX_NUMBER_OF_FLOORS));
 
 
                                 System.out.println("INPUT NUMBER OF USES :");
@@ -98,43 +112,52 @@ public class FacilityController {
                                 do {
                                     System.out.println("INPUT SERVICE NAME :");
                                     name1 = scanner.nextLine();
-                                    System.out.println("Enter the wrong name, please re-enter");
-                                } while (!Regex.checkRoomName(name1));
+                                    if (!name1.matches(Regex.REGEX_ROOM_NAME)){
+                                        System.out.println("Enter the wrong name, please re-enter");
+                                    }
+                                } while (!name1.matches(Regex.REGEX_ROOM_NAME));
 
                                 String area1;
                                 do {
                                     System.out.println("INPUT AREA : ");
                                     area1 = scanner.nextLine();
-                                    System.out.println("Enter the wrong area, please re-enter");
-                                } while (!Regex.checkArea(area1));
+                                    if (!area1.matches(Regex.REGEX_AREA)){
+                                        System.out.println("Enter the wrong area, please re-enter");
+                                    }
+                                } while (!area1.matches(Regex.REGEX_AREA));
 
-                                String retalCosts1;
+                                String rentalCosts1;
                                 do {
                                     System.out.println("INPUT RENTAL COSTS : ");
-                                    retalCosts1 = scanner.nextLine();
-                                    System.out.println("Enter the wrong rental costs, please re-enter");
-                                } while (!Regex.checkRentalCosts(retalCosts1));
+                                    rentalCosts1 = scanner.nextLine();
+                                    if (!rentalCosts1.matches(Regex.REGEX_RENTAL_COSTS)){
+                                        System.out.println("Enter the wrong rental costs, please re-enter");
+                                    }
+                                } while (!rentalCosts1.matches(Regex.REGEX_RENTAL_COSTS));
 
                                 String maxPeople1;
                                 do {
                                     System.out.println("INPUT MAX PEOPLE :");
                                     maxPeople1 = scanner.nextLine();
-                                    System.out.println("Enter the wrong max people, please re-enter");
-                                } while (!Regex.checkMaxPeople(maxPeople1));
-
+                                    if (!maxPeople1.matches(Regex.REGEX_MAX_PEOPLE)){
+                                        System.out.println("Enter the wrong max people, please re-enter");
+                                    }
+                                } while (!maxPeople1.matches(Regex.REGEX_MAX_PEOPLE));
 
                                 String rentalType1;
                                 do {
                                     System.out.println("INPUT RENTAL TYPE : ");
                                     rentalType1 = scanner.nextLine();
-                                    System.out.println("Enter the wrong rental type, please re-enter");
-                                } while (!Regex.checkRentalType(rentalType1));
+                                    if (!rentalType1.matches(Regex.REGEX_RENTAL_TYPE)){
+                                        System.out.println("Enter the wrong rental type, please re-enter");
+                                    }
+                                } while (!rentalType1.matches(Regex.REGEX_RENTAL_TYPE));
 
                                 System.out.println("INPUT FREE SERVICE : ");
                                 String freeService1 = scanner.nextLine();
                                 System.out.println("INPUT NUMBER OF USES : ");
                                 int numberOfUses1 = Integer.parseInt(scanner.nextLine());
-                                Room room = new Room(name1, area1, retalCosts1, maxPeople1, rentalType1, freeService1);
+                                Room room = new Room(name1, area1, rentalCosts1, maxPeople1, rentalType1, freeService1);
                                 facilityService.addNewRoom(room, numberOfUses1);
                                 break;
                             case 3:

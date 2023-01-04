@@ -7,6 +7,8 @@ public interface IEmployeeService {
 
     void addEmployee(Employee employee);
 
+    Employee findById(String id);
+
     void deleteEmployee(String id);
 
     void editEmployee(Employee employee);

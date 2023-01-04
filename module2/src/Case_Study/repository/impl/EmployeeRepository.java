@@ -13,43 +13,55 @@ public class EmployeeRepository implements IEmployeeRepository {
 
     @Override
     public void displayEmployee() {
-        List<Employee> employeeList1 = EmployeeFile.readCSV();
-        for (Employee epl: employeeList1) {
+        employeeList = EmployeeFile.readCSV();
+        for (Employee epl: employeeList) {
             System.out.println(epl);
         }
     }
 
     @Override
     public void addEmployee(Employee employee) {
-        List<Employee> employeeList1 = EmployeeFile.readCSV();
-        employeeList1.add(employee);
-        EmployeeFile.writeCSV(employeeList1);
-        employeeList1.clear();
+        employeeList.clear();
+        employeeList = EmployeeFile.readCSV();
+        employeeList.add(employee);
+        EmployeeFile.writeCSV(employeeList);
 
+
+    }
+
+    @Override
+    public Employee findById(String id) {
+        employeeList = EmployeeFile.readCSV();
+        for (Employee epl : employeeList) {
+            if (epl.getEmployeeCode().equals(id)){
+                return epl;
+            }
+        }
+        return null;
     }
 
 
     @Override
     public void deleteEmployee(String id) {
-        List<Employee> employeeList1 = EmployeeFile.readCSV();
-        for (int i = 0; i < employeeList1.size(); i++) {
-            if (employeeList1.get(i).getEmployeeCode().equals(id)) {
-                employeeList1.remove(employeeList1.get(i));
-                EmployeeFile.writeCSV(employeeList1);
+        employeeList = EmployeeFile.readCSV();
+        for (int i = 0; i < employeeList.size(); i++) {
+            if (employeeList.get(i).getEmployeeCode().equals(id)) {
+                employeeList.remove(employeeList.get(i));
             }
         }
+        EmployeeFile.writeCSV(employeeList);
     }
 
     @Override
     public void editEmployee(Employee employee) {
-        List<Employee> employeeList1 = EmployeeFile.readCSV();
-        for (int i = 0; i < employeeList1.size(); i++) {
-            if (employeeList1.get(i).getEmployeeCode().equals(employee.getEmployeeCode())) {
-                employeeList1.set(i, employee);
+        employeeList = EmployeeFile.readCSV();
+        for (int i = 0; i < employeeList.size(); i++) {
+            if (employeeList.get(i).getEmployeeCode().equals(employee.getEmployeeCode())) {
+                employeeList.set(i, employee);
                 break;
             }
         }
-        EmployeeFile.writeCSV(employeeList1);
+        EmployeeFile.writeCSV(employeeList);
     }
 
     @Override
